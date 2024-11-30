@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tracebooks.back.mapper.BookMapper">
+    <select id="search" resultType="com.tracebooks.back.entity.Book">
+        SELECT * FROM books_info
+        WHERE name LIKE CONCAT('%', #{words}, '%')
+           OR author LIKE CONCAT('%', #{words}, '%')
+           OR publisher LIKE CONCAT('%', #{words}, '%')
+           OR abstracts LIKE CONCAT('%', #{words}, '%')
+           OR UDC LIKE CONCAT('%', #{words}, '%')
+    </select>
+    <select id="searchByRegion" resultType="com.tracebooks.back.entity.Book">
+        SELECT * FROM books_info
+        WHERE UDC LIKE CONCAT(#{reg}, '%')
+          AND (name LIKE CONCAT('%', #{words}, '%')
+            OR author LIKE CONCAT('%', #{words}, '%')
+            OR publisher LIKE CONCAT('%', #{words}, '%')
+            OR abstracts LIKE CONCAT('%', #{words}, '%'))
+    </select>
+</mapper>

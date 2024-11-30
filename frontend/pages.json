@@ -1,0 +1,125 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	
+		{
+			"path" : "pages/loginPage/loginPage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "TRACE"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "TRACE"
+			}
+		},
+		{
+			"path" : "pages/personalInfo/personalInfo",
+			"style" : 
+			{
+				"navigationBarTitleText" : "TRACE"
+			}
+		},
+		{
+			"path" : "pages/photoSearch/photoSearch",
+			"style" : 
+			{
+				"navigationBarTitleText" : "TRACE"
+			}
+		}
+	],
+	"subPackages": [{
+		"root": "subpages",
+			"pages": [{
+				"path": "searchByRegion/searchByRegion",
+				"style": {
+					"navigationBarTitleText": "TRACE"
+				}
+			},
+			{
+				"path" : "cameraSearchResult/cameraSearchResult",
+				"style" : 
+				{
+					"navigationBarTitleText" : "TRACE"
+				}
+			},
+			{
+				"path" : "changeInfo/changeInfo",
+				"style" : 
+				{
+					"navigationBarTitleText" : ""
+				}
+			},
+			{
+				"path" : "problem/problem",
+				"style" : 
+				{
+					"navigationBarTitleText" : ""
+				}
+			},
+			{
+				"path" : "fedback/fedback",
+				"style" : 
+				{
+					"navigationBarTitleText" : "问题反馈"
+				}
+			},
+			{
+				"path" : "agreement/agreement",
+				"style" : 
+				{
+					"navigationBarTitleText" : "协议与条款"
+				}
+			}]
+	}],
+	// "preloadRule":: {
+	// 	"pages/index/index": {
+	// 		"network": "all",
+	// 		"packages": ["subpages"]
+	// 	},
+	// 	"pages/bookshelf/bookshelf": {
+	// 		"network": "all",
+	// 		"packages": ["subpages"]
+	// 	},
+	// 	"pages/personalInfo/personalInfo": {
+	// 		"network": "all",
+	// 		"packages": ["subpages"]
+	// 	},
+	// 	"subpages/searchByRegion/searchByRegion": {
+	// 		"network": "all",
+	// 		"packages": ["subpages"]
+	// 	}
+	// },
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"allowsBounceVertical": "YES",
+		"enablePullDownRefresh": true
+	},
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/navigationBar/home.png",
+				"selectedIconPath": "static/navigationBar/home-fill.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/photoSearch/photoSearch",
+				"iconPath": "static/navigationBar/camera.png",
+				"selectedIconPath": "static/navigationBar/camera-fill.png",
+				"text": "拍照"
+			},
+			{
+				"pagePath": "pages/personalInfo/personalInfo",
+				"iconPath": "static/navigationBar/user.png",
+				"selectedIconPath": "static/navigationBar/user-fill.png",
+				"text": "我的"
+			}
+		]
+	},
+	"uniIdRouter": {}
+}

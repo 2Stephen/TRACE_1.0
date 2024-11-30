@@ -1,0 +1,14 @@
+server:
+  port: 8080
+#  address: 192.168.104.154
+
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/trace
+        username: root
+        password: 2432757689
+        driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml

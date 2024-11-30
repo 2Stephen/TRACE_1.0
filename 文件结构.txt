@@ -1,0 +1,57 @@
+
+TRACE/
+├── frontend/  # 前端部分   
+│   ├── static/  # 静态资源（图片、图标等）
+│   ├── store/	  # vuex文件
+│   ├── pages/  # 页面文件
+│   ├── subpages/  # 子页面文件（避免加载量过大造成卡顿）
+│   ├── utils/  # 工具类函数，如图片处理、API请求封装等
+│   ├── main.js  # 应用入口文件
+│   ├── App.vue  # 根组件
+│   ├── manifest.json  # 应用配置文件，定义项目信息
+│   ├── pages.json  # 页面路由配置
+│   ├── uni.scss  # 全局样式文件
+│   ├── package.json  # 前端依赖管理文件
+│   └── others  # 项目依赖文件，与本项目无关
+│
+├── backend/  # 后端部分
+│   ├── springboot/  # Java后端（用户管理、数据库操作部分）
+│   │   ├── src/
+│   │   │   ├── main/
+│   │   │   │   ├── java/com/tracebooks/back/  # Java代码目录
+│   │   │   │   │   ├── config/  # Spring Boot 配置类
+│   │   │   │   │   ├── controller/  # 控制器层，处理HTTP请求
+│   │   │   │   │   ├── entity/  # 实体类，对应数据库表
+│   │   │   │   │   ├── mapper/  # MyBatis-Plus的Mapper接口
+│   │   │   │   │   ├── service/  # 服务层，业务逻辑
+│   │   │   │   │   ├── POJO/  # 普通JAVA对象，对接前端数据
+│   │   │   │   ├── resources/  # 配置文件及静态资源
+│   │   │   │   │   ├── application.yml  # Spring Boot的配置文件
+│   │   │   │   │   ├── mapper/UserMapper # MyBatis映射文件
+│   │   │   └── test/  # 测试类
+│   │   ├── pom.xml  # Maven依赖管理文件
+│   │
+│   ├── flask/  # Python后端（核心算法部分）
+│   │   ├── models/  # 数据增强后的数据库图片
+│   │   ├── location/  # 书脊位置信息
+│   │   ├── models/  # 深度学习模型文件
+│   │   ├── photo/  # 前端拍摄图片缓存位置
+│   │   ├── results/  # 识别结果图片保存位置
+│   │   ├── segment_by_yolo/  # 测试图片实例分割结果
+│   │   ├── static/  # 静态文件（处理后的图像、临时文件等）
+│   │   ├── templates/  # HTML模板
+│   │   ├── app.py  # Flask应用初始化,处理图片上传、算法调用等请求
+│   │   ├── img_search.py  # 核心模型调用函数
+│
+├── database/  # 数据库部分
+│   ├── book_info.sql  # 书籍信息数据库初始化脚本
+│   ├── user_info.sql  # 用户信息数据库初始化脚本
+│
+├── train/  # 模型构建及训练部分
+│   ├── TRACE.ipynb  # 核心模型训练部分
+│   ├── models/  # 核心模型
+│   ├── images/  # 训练所需图片
+│   ├── instance_segment # 实例分割训练操作
+│   ├── others  # 杂项
+│
+└── 文件结构.txt  # 项目目录简介
